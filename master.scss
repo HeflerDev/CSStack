@@ -1,0 +1,225 @@
+@import './reset.css' ;
+
+// Margins
+  $margin: 1rem ;
+  $margin-s: 2rem ;
+  $margin-m: 3rem ;
+  $margin-l: 4rem ;
+// Padding
+  $padding: $margin / 2 ;
+  $padding-s: $margin-s / 2 ;
+  $padding-m: $margin-m / 2 ;
+  $padding-l: $margin-l / 2 ;
+
+// Breakpoints
+  $breakpoint-phone: 640px ;
+  $breakpoint-tablet: 768px ;
+  $breakpoint-desktop: 1024px ;
+
+// Text Sizing
+  $text-mobile: 42px;
+  $text-mobile-big: 56px;
+  $text-mobile-huge: 72px;
+  $text-tablet: 24px;
+  $text-tablet-big: 32px;
+  $text-desktop: 12px;
+  $text-desktop-big: 18px;
+
+// Fonts
+  $font-title: sans-serif ;
+  $font-text: serif ;
+  $font-accent: cursive ;
+
+// App Colors
+  // Text
+    $color-text-light: whitesmoke ;
+    $color-text-dark: black ;
+  // Palette
+    $color-opposite: rgba (255,255,255,1) ;
+    $color-primary: rgba(36,36,36,1) ;
+    $color-secondary: rgba(100,100,100,1) ;
+    $color-accent: rgba (200,200,200,1) ;
+// App Radius
+  $radius-soft: 0.1rem ;
+  $radius: 0.5rem ;
+  $radius-rounded: 1rem ;
+  $radius-rounder: 2rem ;
+  $radius-circle: 50% ;
+// Border
+  $border: 0.2rem;
+  $border-line: 0.1rem;
+  $border-bold: 0.4rem;
+  $border-bolder: 0.8rem;
+
+
+// Patterns
+html{
+  font-size: $text-mobile;
+
+  @media screen and (min-device-width: $breakpoint-tablet) {
+    font-size: $text-tablet;
+  }
+
+  @media screen and (min-device-width: $breakpoint-desktop) {
+    font-size: $text-desktop;
+  }
+}
+
+.box {
+  display: flex ;
+  width: 100% ;
+  text-align: center ;
+  flex-direction: column ;
+
+  @media screen and (max-device-width: $breakpoint-phone) {
+    margin: auto ;
+    padding: $padding ;
+  }
+
+  @media screen and (min-device-width: $breakpoint-phone) {
+    margin: auto ;
+    padding: $padding-s ;
+  }
+
+  @media screen and (min-device-width: $breakpoint-tablet) {
+      margin: auto ;
+      padding: $padding-m ;
+  }
+
+  @media screen and (min-device-width: $breakpoint-desktop) {
+      margin: auto ;
+      padding: $padding-l ;
+  }
+}
+
+.minibox {
+  display: flex ;
+  width: 100% ;
+
+  @media screen and (max-width: $breakpoint-phone) {
+    margin: auto ;
+    padding: $padding / 4 ;
+  }
+
+  @media screen and (min-width: $breakpoint-phone) {
+    margin: auto ;
+    padding: $padding-s / 4 ;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+      margin: auto ;
+      padding: $padding-m / 4 ;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+      margin: auto ;
+      padding: $padding-l / 4 ;
+  }
+}
+
+.column {
+  flex-direction: column !important;
+}
+
+.row {
+  flex-direction: row !important ;
+}
+
+.start {
+  justify-content: flex-start !important;
+}
+
+.center {
+  justify-content: center !important;
+}
+
+.end {
+  justify-content: flex-end !important;
+}
+
+.around {
+  justify-content: space-around !important ;
+}
+
+.between {
+  justify-content: space-between !important;
+}
+
+.btn {
+  border: solid $color-secondary 2px;
+  background: $color-accent ;
+  color: $color-opposite ;
+  transition: 0.2s;
+  font-family: $font-accent;
+  &:hover {
+    background: $color-opposite;
+    transition: 0.2s;
+    transform: scale(1.1);
+  }
+}
+
+.border{
+  border: solid $color-secondary $border ;
+}
+
+.line {
+  border-width: $border-line ;
+}
+
+.bold {
+  border-width: $border-bold ;
+}
+
+.bolder {
+  border-width: $border-bolder ;
+}
+
+.radius {
+  border-radius: $radius ;
+}
+
+.soft {
+  border-radius: $radius-soft ;
+}
+
+.rounded {
+  border-radius: $radius-rounded ;
+}
+
+.rounder {
+  border-radius: $radius-rounder;
+}
+
+.circle {
+  border-radius: $radius-circle ;
+}
+
+.thin {
+  border-width: thin ;
+}
+
+.title {
+  color: $color-opposite ;
+  text-decoration: none ;
+  transition: 0.1s ;
+  font-family: $font-title ;
+  font-size: $text-mobile-huge ;
+  &:hover {
+    transform: scale(1.1) ;
+    text-decoration: none ;
+    color: $color-opposite ;
+    transition: 0.1s ;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.field {
+  border-radius: 5px;
+  background: $color-primary;
+  color: $color-opposite ;
+}
