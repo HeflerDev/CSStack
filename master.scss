@@ -1,4 +1,4 @@
-@import './reseter.css' ;
+@import './reset.css' ;
 
 // Margins
   $margin: 1rem ;
@@ -12,33 +12,45 @@
   $padding-l: $margin-l / 2 ;
 
 // Breakpoints
-  $breakpoint-phone: 640px  ;
+  $breakpoint-phone: 640px ;
   $breakpoint-tablet: 768px ;
   $breakpoint-desktop: 1024px ;
 
 // Text Sizing
-  $text-mobile-huge: 72px;
-  $text-mobile-big: 56px;
   $text-mobile: 42px;
+  $text-mobile-big: 56px;
+  $text-mobile-huge: 72px;
   $text-tablet: 24px;
+  $text-tablet-big: 32px;
   $text-desktop: 12px;
+  $text-desktop-big: 18px;
 
 // Fonts
-  $font-primary: 'Poppins', sans-serif ;
-  $font-secondary: 'Source Serif Pro', serif ;
-  $font-accent: 'Source Code Pro', monospace;
+  $font-title: sans-serif ;
+  $font-text: serif ;
+  $font-accent: cursive ;
 
 // App Colors
   // Text
     $color-text-light: whitesmoke ;
-    $color-text-dark: rgb(30,30,30);
-  // Background
+    $color-text-dark: black ;
+  // Palette
     $color-opposite: rgba (255,255,255,1) ;
     $color-primary: rgba(36,36,36,1) ;
     $color-secondary: rgba(100,100,100,1) ;
     $color-accent: rgba (200,200,200,1) ;
 // App Radius
-$radius: 1px;
+  $radius-soft: 0.1rem ;
+  $radius: 0.5rem ;
+  $radius-rounded: 1rem ;
+  $radius-rounder: 2rem ;
+  $radius-circle: 50% ;
+// Border
+  $border: 0.2rem;
+  $border-line: 0.1rem;
+  $border-bold: 0.4rem;
+  $border-bolder: 0.8rem;
+
 
 // Patterns
 html{
@@ -55,8 +67,9 @@ html{
 
 .box {
   display: flex ;
-  width: 100%;
+  width: 100% ;
   text-align: center ;
+  flex-direction: column ;
 
   @media screen and (max-device-width: $breakpoint-phone) {
     margin: auto ;
@@ -77,80 +90,59 @@ html{
       margin: auto ;
       padding: $padding-l ;
   }
-
-  .column {
-    flex-direction: column;
-  }
-
-  .start {
-    justify-content: flex-start;
-  }
-
-  .center {
-    justify-content: center;
-  }
-
-  .end {
-    justify-content: flex-end;
-  }
-
-  .around {
-    justify-content: space-around;
-  }
-
-  .between {
-    justify-content: space-between;
-  }
 }
 
-.box-s {
-display: flex ;
-width: 100% ;
+.minibox {
+  display: flex ;
+  width: 100% ;
 
-@media screen and (max-width: $breakpoint-phone) {
-  margin: auto ;
-  padding: $padding / 4 ;
-}
-
-@media screen and (min-width: $breakpoint-phone) {
-  margin: auto ;
-  padding: $padding-s / 4 ;
-}
-
-@media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (max-width: $breakpoint-phone) {
     margin: auto ;
-    padding: $padding-m / 4 ;
-}
+    padding: $padding / 4 ;
+  }
 
-@media screen and (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: $breakpoint-phone) {
     margin: auto ;
-    padding: $padding-l / 4 ;
+    padding: $padding-s / 4 ;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+      margin: auto ;
+      padding: $padding-m / 4 ;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+      margin: auto ;
+      padding: $padding-l / 4 ;
+  }
 }
 
 .column {
   flex-direction: column !important;
 }
 
+.row {
+  flex-direction: row !important ;
+}
+
 .start {
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 
 .center {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .end {
-  justify-content: flex-end;
+  justify-content: flex-end !important;
 }
 
 .around {
-  justify-content: space-around;
+  justify-content: space-around !important ;
 }
 
 .between {
-  justify-content: space-between;
-}
-
+  justify-content: space-between !important;
 }
 
 .btn {
@@ -166,16 +158,51 @@ width: 100% ;
   }
 }
 
-.border-rounded {
-  border: solid $color-opposite 2px;
-  border-radius: 5px;
+.border{
+  border: solid $color-secondary $border ;
+}
+
+.line {
+  border-width: $border-line ;
+}
+
+.bold {
+  border-width: $border-bold ;
+}
+
+.bolder {
+  border-width: $border-bolder ;
+}
+
+.radius {
+  border-radius: $radius ;
+}
+
+.soft {
+  border-radius: $radius-soft ;
+}
+
+.rounded {
+  border-radius: $radius-rounded ;
+}
+
+.rounder {
+  border-radius: $radius-rounder;
+}
+
+.circle {
+  border-radius: $radius-circle ;
+}
+
+.thin {
+  border-width: thin ;
 }
 
 .title {
   color: $color-opposite ;
-  text-decoration: none;
+  text-decoration: none ;
   transition: 0.1s ;
-  font-family: $font-primary ;
+  font-family: $font-title ;
   font-size: $text-mobile-huge ;
   &:hover {
     transform: scale(1.1) ;
@@ -189,12 +216,10 @@ width: 100% ;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-.row {
-  flex-direction: row;
 }
+
 .field {
   border-radius: 5px;
   background: $color-primary;
   color: $color-opposite ;
-  }
 }

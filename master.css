@@ -1,4 +1,4 @@
-@import url(./reseter.css);
+@import url(./reset.css);
 html {
   font-size: 42px; }
   @media screen and (min-device-width: 768px) {
@@ -11,7 +11,8 @@ html {
 .box {
   display: flex;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  flex-direction: column; }
   @media screen and (max-device-width: 640px) {
     .box {
       margin: auto;
@@ -28,71 +29,94 @@ html {
     .box {
       margin: auto;
       padding: 2rem; } }
-  .box .column {
-    flex-direction: column; }
-  .box .start {
-    justify-content: flex-start; }
-  .box .center {
-    justify-content: center; }
-  .box .end {
-    justify-content: flex-end; }
-  .box .around {
-    justify-content: space-around; }
-  .box .between {
-    justify-content: space-between; }
 
-.box-s {
+.minibox {
   display: flex;
   width: 100%; }
   @media screen and (max-width: 640px) {
-    .box-s {
+    .minibox {
       margin: auto;
       padding: 0.125rem; } }
   @media screen and (min-width: 640px) {
-    .box-s {
+    .minibox {
       margin: auto;
       padding: 0.25rem; } }
   @media screen and (min-width: 768px) {
-    .box-s {
+    .minibox {
       margin: auto;
       padding: 0.375rem; } }
   @media screen and (min-width: 1024px) {
-    .box-s {
+    .minibox {
       margin: auto;
       padding: 0.5rem; } }
-  .box-s .column {
-    flex-direction: column !important; }
-  .box-s .start {
-    justify-content: flex-start; }
-  .box-s .center {
-    justify-content: center; }
-  .box-s .end {
-    justify-content: flex-end; }
-  .box-s .around {
-    justify-content: space-around; }
-  .box-s .between {
-    justify-content: space-between; }
+
+.column {
+  flex-direction: column !important; }
+
+.row {
+  flex-direction: row !important; }
+
+.start {
+  justify-content: flex-start !important; }
+
+.center {
+  justify-content: center !important; }
+
+.end {
+  justify-content: flex-end !important; }
+
+.around {
+  justify-content: space-around !important; }
+
+.between {
+  justify-content: space-between !important; }
 
 .btn {
   border: solid #646464 2px;
   background: rgba 200, 200, 200, 1;
   color: rgba 255, 255, 255, 1;
   transition: 0.2s;
-  font-family: "Source Code Pro", monospace; }
+  font-family: cursive; }
   .btn:hover {
     background: rgba 255, 255, 255, 1;
     transition: 0.2s;
     transform: scale(1.1); }
 
-.border-rounded {
-  border: solid rgba 255, 255, 255, 1 2px;
-  border-radius: 5px; }
+.border {
+  border: solid #646464 0.2rem; }
+
+.line {
+  border-width: 0.1rem; }
+
+.bold {
+  border-width: 0.4rem; }
+
+.bolder {
+  border-width: 0.8rem; }
+
+.radius {
+  border-radius: 0.5rem; }
+
+.soft {
+  border-radius: 0.1rem; }
+
+.rounded {
+  border-radius: 1rem; }
+
+.rounder {
+  border-radius: 2rem; }
+
+.circle {
+  border-radius: 50%; }
+
+.thin {
+  border-width: thin; }
 
 .title {
   color: rgba 255, 255, 255, 1;
   text-decoration: none;
   transition: 0.1s;
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   font-size: 72px; }
   .title:hover {
     transform: scale(1.1);
@@ -104,11 +128,10 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
-  .form .row {
-    flex-direction: row; }
-  .form .field {
-    border-radius: 5px;
-    background: #242424;
-    color: rgba 255, 255, 255, 1; }
+
+.field {
+  border-radius: 5px;
+  background: #242424;
+  color: rgba 255, 255, 255, 1; }
 
 /*# sourceMappingURL=master.css.map */
