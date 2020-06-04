@@ -18,6 +18,9 @@ looks more like phrases, for example:
   </div>
 ```
 
+Another thing is that: I love Flex, so I tried to do as 'Flexier' as possible,
+making more self-adjustable.
+
 ## Built With
 
 - **CSS**
@@ -35,4 +38,5 @@ Contribution, issues and feature requests are widely welcome!
 
 ## Suport
 
-Give a star if you liked this project, and, if you like,
+Give a star if you liked this project, and credit if you used it, would be very
+supportive to me.
