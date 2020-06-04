@@ -1,4 +1,65 @@
 @import url(./reset.css);
+:root {
+  --grid-gap: 10px; }
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--grid-gap) * -1) 0 0 calc(var(--grid-gap) * -1); }
+
+.col {
+  box-sizing: border-box;
+  background-clip: content-box;
+  flex-basis: 100%; }
+
+.col-1 {
+  flex-basis: 8.33%;
+  max-width: 8.33%; }
+
+.col-2 {
+  flex-basis: 16.66%;
+  max-width: 16.66%; }
+
+.col-3 {
+  flex-basis: 25%;
+  max-width: 25%; }
+
+.col-4 {
+  flex-basis: 33.33%;
+  max-width: 33.33%; }
+
+.col-5 {
+  flex-basis: 41.66%;
+  max-width: 41.66%; }
+
+.col-6 {
+  flex-basis: 50%;
+  max-width: 50%; }
+
+.col-7 {
+  flex-basis: 58.33%;
+  max-width: 58.33%; }
+
+.col-8 {
+  flex-basis: 66.66%;
+  max-width: 66.66%; }
+
+.col-9 {
+  flex-basis: 75%;
+  max-width: 75%; }
+
+.col-10 {
+  flex-basis: 83.33%;
+  max-width: 83.33%; }
+
+.col-11 {
+  flex-basis: 91.66%;
+  max-width: 91.66%; }
+
+.col-12 {
+  flex-basis: 100%;
+  max-width: 100%; }
+
 html {
   font-size: 42px; }
   @media screen and (min-device-width: 768px) {
@@ -32,7 +93,9 @@ html {
 
 .minibox {
   display: flex;
-  width: 100%; }
+  width: 100%;
+  flex-wrap: wrap;
+  margin: calc(var(--grid-gap) * -1) 0 0 calc(var(--grid-gap) * -1); }
   @media screen and (max-width: 640px) {
     .minibox {
       margin: auto;
@@ -133,5 +196,102 @@ html {
   border-radius: 5px;
   background: #242424;
   color: rgba 255, 255, 255, 1; }
+
+@media only screen and (min-width: 768px) {
+  .col-m-1 {
+    flex-basis: 8.33%;
+    max-width: 8.33%; }
+
+  .col-m-2 {
+    flex-basis: 16.66%;
+    max-width: 16.66%; }
+
+  .col-m-3 {
+    flex-basis: 25%;
+    max-width: 25%; }
+
+  .col-m-4 {
+    flex-basis: 33.33%;
+    max-width: 33.33%; }
+
+  .col-m-5 {
+    flex-basis: 41.66%;
+    max-width: 41.66%; }
+
+  .col-m-6 {
+    flex-basis: 50%;
+    max-width: 50%; }
+
+  .col-m-7 {
+    flex-basis: 58.33%;
+    max-width: 58.33%; }
+
+  .col-m-8 {
+    flex-basis: 66.66%;
+    max-width: 66.66%; }
+
+  .col-m-9 {
+    flex-basis: 75%;
+    max-width: 75%; }
+
+  .col-m-10 {
+    flex-basis: 83.33%;
+    max-width: 83.33%; }
+
+  .col-m-11 {
+    flex-basis: 91.66%;
+    max-width: 91.66%; }
+
+  .col-m-12 {
+    flex-basis: 100%;
+    max-width: 100%; } }
+@media only screen and (min-width: 1024px) {
+  .col-l-1 {
+    flex-basis: 8.33%;
+    max-width: 8.33%; }
+
+  .col-l-2 {
+    flex-basis: 16.66%;
+    max-width: 16.66%; }
+
+  .col-l-3 {
+    flex-basis: 25%;
+    max-width: 25%; }
+
+  .col-l-4 {
+    flex-basis: 33.33%;
+    max-width: 33.33%; }
+
+  .col-l-5 {
+    flex-basis: 41.66%;
+    max-width: 41.66%; }
+
+  .col-l-6 {
+    flex-basis: 50%;
+    max-width: 50%; }
+
+  .col-l-7 {
+    flex-basis: 58.33%;
+    max-width: 58.33%; }
+
+  .col-l-8 {
+    flex-basis: 66.66%;
+    max-width: 66.66%; }
+
+  .col-l-9 {
+    flex-basis: 75%;
+    max-width: 75%; }
+
+  .col-l-10 {
+    flex-basis: 83.33%;
+    max-width: 83.33%; }
+
+  .col-l-11 {
+    flex-basis: 91.66%;
+    max-width: 91.66%; }
+
+  .col-l-12 {
+    flex-basis: 100%;
+    max-width: 100%; } }
 
 /*# sourceMappingURL=master.css.map */
