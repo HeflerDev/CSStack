@@ -1,5 +1,21 @@
 @import './reset.css' ;
 
+// Number of Columns
+  $grid-columns: 12;
+
+  $content-padding: 5px;
+  $content-padding-2: 10px;
+  $content-padding-3: 15px;
+  $content-padding-4: 20px;
+
+  $content-margin: 5px;
+  $content-margin-2: 10px;
+  $content-margin-3: 15px;
+  $content-margin-4: 20px;
+//grid gap
+  :root {
+    --grid-gap: 10px;
+  }
 // Margins
   $margin: 1rem ;
   $margin-s: 2rem ;
@@ -53,6 +69,37 @@
 
 
 // Patterns
+
+// Grid System Logic
+//flex container definition
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--grid-gap) * -1) 0 0 calc(var(--grid-gap) * -1);
+}
+
+.col {
+  box-sizing: border-box;
+  background-clip: content-box;
+  flex-basis: 100%;
+}
+
+//round flex items' width
+@function round-width($i) {
+  $width: floor(100 * $i * 100 / $grid-columns) / 100;
+  @return $width#{"%"};
+}
+
+//utility classes
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex-basis: round-width($i);
+    max-width: round-width($i);
+  }
+}
+
 html{
   font-size: $text-mobile;
 
@@ -95,6 +142,8 @@ html{
 .minibox {
   display: flex ;
   width: 100% ;
+  flex-wrap: wrap;
+  margin: calc(var(--grid-gap) * -1) 0 0 calc(var(--grid-gap) * -1);
 
   @media screen and (max-width: $breakpoint-phone) {
     margin: auto ;
@@ -222,4 +271,25 @@ html{
   border-radius: 5px;
   background: $color-primary;
   color: $color-opposite ;
+}
+
+
+@media only screen and (min-width: 768px) {
+  @for $i from 1 through $grid-columns {
+    .col-m-#{$i} {
+      flex-basis: round-width($i);
+      max-width: round-width($i);
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  @for $i from 1 through $grid-columns {
+    .col-l-#{$i} {
+      flex-basis: round-width($i);
+      max-width: round-width($i);
+    }
+  }
+
 }
