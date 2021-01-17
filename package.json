@@ -1,6 +1,6 @@
 {
-  "name": "bitbox-framework",
-  "version": "2.0.0",
+  "name": "CSStack",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "mode": "development",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HeflerDev/BitBox-Framework.git"
+    "url": "git+https://github.com/HeflerDev/CSStack.git"
   },
   "author": "HeflerDev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HeflerDev/BitBox-Framework/issues"
+    "url": "https://github.com/HeflerDev/CSStack/issues"
   },
-  "homepage": "https://github.com/HeflerDev/BitBox-Framework#readme",
+  "homepage": "https://github.com/HeflerDev/CSStack#readme",
   "devDependencies": {
     "css-loader": "^5.0.1",
     "style-loader": "^2.0.0",

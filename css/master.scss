@@ -1,5 +1,11 @@
 @import './reset.css' ;
 
+// Grid Config
+  $grid-columns: 12;
+  :root { //Beta
+    --grid-gap: 0px;
+  }
+
 // Margins
   $margin: 1rem ;
   $margin-s: 2rem ;
@@ -30,28 +36,6 @@
   $font-text: serif ;
   $font-accent: cursive ;
 
-// App Colors
-  // Text
-    $color-text-light: whitesmoke ;
-    $color-text-dark: black ;
-  // Palette
-    $color-opposite: rgba (255,255,255,1) ;
-    $color-primary: rgba(36,36,36,1) ;
-    $color-secondary: rgba(100,100,100,1) ;
-    $color-accent: rgba (200,200,200,1) ;
-// App Radius
-  $radius-soft: 0.1rem ;
-  $radius: 0.5rem ;
-  $radius-rounded: 1rem ;
-  $radius-rounder: 2rem ;
-  $radius-circle: 50% ;
-// Border
-  $border: 0.2rem;
-  $border-line: 0.1rem;
-  $border-bold: 0.4rem;
-  $border-bolder: 0.8rem;
-
-
 // Patterns
 html{
   font-size: $text-mobile;
@@ -65,7 +49,7 @@ html{
   }
 }
 
-.box {
+.stack {
   display: flex ;
   width: 100% ;
   text-align: center ;
@@ -92,7 +76,7 @@ html{
   }
 }
 
-.minibox {
+.queue {
   display: flex ;
   width: 100% ;
 
@@ -145,81 +129,49 @@ html{
   justify-content: space-between !important;
 }
 
-.btn {
-  border: solid $color-secondary 2px;
-  background: $color-accent ;
-  color: $color-opposite ;
-  transition: 0.2s;
-  font-family: $font-accent;
-  &:hover {
-    background: $color-opposite;
-    transition: 0.2s;
-    transform: scale(1.1);
-  }
-}
-
-.border{
-  border: solid $color-secondary $border ;
-}
-
-.line {
-  border-width: $border-line ;
-}
-
-.bold {
-  border-width: $border-bold ;
-}
-
-.bolder {
-  border-width: $border-bolder ;
-}
-
-.radius {
-  border-radius: $radius ;
-}
-
-.soft {
-  border-radius: $radius-soft ;
-}
-
-.rounded {
-  border-radius: $radius-rounded ;
-}
-
-.rounder {
-  border-radius: $radius-rounder;
-}
-
-.circle {
-  border-radius: $radius-circle ;
-}
-
-.thin {
-  border-width: thin ;
-}
-
-.title {
-  color: $color-opposite ;
-  text-decoration: none ;
-  transition: 0.1s ;
-  font-family: $font-title ;
-  font-size: $text-mobile-huge ;
-  &:hover {
-    transform: scale(1.1) ;
-    text-decoration: none ;
-    color: $color-opposite ;
-    transition: 0.1s ;
-  }
-}
-
-.form {
+// Grid Elements
+// Utility Classes
+.board {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: calc(var(--grid-gap) * -1) 0 0 calc(var(--grid-gap) * -1);
 }
 
-.field {
-  border-radius: 5px;
-  background: $color-primary;
-  color: $color-opposite ;
+.col {
+  box-sizing: border-box;
+  background-clip: content-box;
+  flex-basis: 100%;
 }
+
+@function round-width($i) {
+  $width: floor(100 * $i * 100 / $grid-columns) / 100;
+  @return $width#{"%"};
+}
+
+// Grid Logic
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex-basis: round-width($i);
+    max-width: round-width($i);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  @for $i from 1 through $grid-columns {
+    .col-m-#{$i} {
+      flex-basis: round-width($i);
+      max-width: round-width($i);
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  @for $i from 1 through $grid-columns {
+    .col-l-#{$i} {
+      flex-basis: round-width($i);
+      max-width: round-width($i);
+    }
+  }
+}
+
