@@ -17,5 +17,43 @@
   It has a responsive columns feature mixed with 'a box inside a box' concept which helps 
   getting those nasty elements in the place you want.
 </p>
+  
+### Working with the main containers
+
+Considering Below:
+```
+  <div class='stack'>
+    <div class='queue between'>
+      <div class='element'></div>
+      <div class='element'></div>
+      <div class='element'></div>
+    </div>
+    <div class='queue'></div>
+    <div class='queue'></div>
+    <div class='queue'></div>
+  </div>
+```
+Which compiles to: <br>
+<img src='./stack-concept.svg'>
+<br>
+- The 'container' element has the class 'stack', which stacks all elements inside itself.
+- The 'box' elements have the class 'queue' each one, making that horizontal stacking.
+  - Note that it also has the 'between' class, arranging the elements inside accordingly.
+- And the 'elements' are commom elements.
+
+### Working with the grid system
+
+Working with the grid system is very based on bootstrap: It has columns from 1 to 12 and you can define it's responsiveness.
+
+So creating something like this:<br>
+```
+  <div class='board'>
+    <div col-4>
+    <div col-4>
+    <div col-4>
+  </div>
+```
+
+
 
 
