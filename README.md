@@ -17,10 +17,5 @@
   It has a responsive columns feature mixed with 'a box inside a box' concept which helps 
   getting those nasty elements in the place you want.
 </p>
-<p>
-  Consider the Image Below: <br>
-  <img src='./stack-concept.svg'> <br>
-
-</p>
 
 
