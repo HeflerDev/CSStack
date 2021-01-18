@@ -1,8 +1,8 @@
-# CSStack
+# CSStack (Beta)
 
 ## Summary
 - <a href='#overview'>Overview</a>
-
+- <a href='#Working with the main containers'>Working with the main containers</a>
 ## Overview
 
 <p> 
@@ -12,7 +12,7 @@
   half of your HTML is destined for classes.
 </p>
 <p> 
-  CSStack is a small-scale CSS Grid framework built in SASS focused on the construction of the page structure.
+  CSStack is a tiny CSS Grid framework built in SASS focused on the construction of the page structure.
   It is simple and easy-to-use, aiming to keep the CSS only for styling(fonts, colors...) and 
   polluting it with less lines.
 </p>
@@ -71,7 +71,7 @@ And if creates something like this:<br>
 Compiles to:<br>
 <img src='./col-4-8.svg'>
 
-## How to use
+## How to Install
 
 Install via NPM <br>
 ``` npm i csstack ``` <br>
@@ -81,3 +81,46 @@ Also you can include through jsdlivr <br>
 
 For example, in the HTML: <br>
 ``` <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/csstack@1.0.0/css/master.css'> ``` <br>
+
+## Classes 
+### Containers
+
+- **.stack**
+  - Create a container which elements stack up vertically.
+  
+- **.queue**
+  - Create a container which elements stack up horizontally.
+
+### Grid
+
+- **.board**
+  - Create a container which elements stack up horizontally and enable the grid line break for subsequent items until reach 12 spaces(columns).
+
+- **.col-1** (col-2, col-3... col-12)
+  - Tells the elements to ocupy from 1 to 12 spaces in the container.
+
+- **.col-m-1** (col-m-2, col-m-3... col-m-12)
+  - Tells the elements to ocupy from 1 to 12 spaces in the container.
+    - It Override previous col classes.
+  
+- **.col-l-1** (col-l-2, col-m-3... col-m-12)
+  - Tells the elements to ocupy from 1 to 12 spaces in the container.
+    - It Override previous col classes.
+
+### Flex Helpers
+
+- **.start**
+  - Forces flex content to start.
+  
+- **.center**
+  - Forces flex content center.
+  
+- **.end**
+  - Forces flex content end.
+
+- **.around**
+  - Forces flex content around.
+
+- **.between**
+  - Forces flex content between.
+  
