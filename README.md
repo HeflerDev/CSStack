@@ -53,7 +53,18 @@ So creating something like this:<br>
     <div col-4>
   </div>
 ```
+Compiles to:<br>
+<img src='./col-4.svg'> <br>
 
-
-
+And if creates something like this:<br>
+```
+  <div class='board'>
+    <div col-4>
+    <div col-4>
+    <div col-8>
+  </div>
+```
+<br>
+Compiles to:<br>
+<img src='./col-4-8.svg'>
 
