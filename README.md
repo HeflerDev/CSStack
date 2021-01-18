@@ -3,6 +3,10 @@
 ## Summary
 - <a href='#overview'>Overview</a>
 - <a href='#working-with-the-main-containers'>Working with the main containers</a>
+- <a href='#working-with-the-grid-system'>Working with the grid system</a>
+- <a href='#how-to-install'>How to Install</a>
+- <a href='#classes'>Classes</a>
+- <a href='#contribution'>Contribution</a>
 ## Overview
 
 <p> 
@@ -123,4 +127,8 @@ For example, in the HTML: <br>
 
 - **.between**
   - Forces flex content between.
+  
+## Contribution
+
+Like the project? Give a star, issues, comments and pull requests are welcome.
   
