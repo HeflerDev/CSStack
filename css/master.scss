@@ -36,6 +36,32 @@
   $font-text: serif ;
   $font-accent: cursive ;
 
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--grid-gap) * -1) 0 0 calc(var(--grid-gap) * -1);
+}
+
+.col {
+  box-sizing: border-box;
+  background-clip: content-box;
+  flex-basis: 100%;
+}
+
+@function round-width($i) {
+  $width: floor(100 * $i * 100 / $grid-columns) / 100;
+  @return $width#{"%"};
+}
+
+// Grid Logic
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex-basis: round-width($i);
+    max-width: round-width($i);
+  }
+}
+
 // Patterns
 html{
   font-size: $text-mobile;
@@ -131,31 +157,6 @@ html{
 
 // Grid Elements
 // Utility Classes
-.board {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(var(--grid-gap) * -1) 0 0 calc(var(--grid-gap) * -1);
-}
-
-.col {
-  box-sizing: border-box;
-  background-clip: content-box;
-  flex-basis: 100%;
-}
-
-@function round-width($i) {
-  $width: floor(100 * $i * 100 / $grid-columns) / 100;
-  @return $width#{"%"};
-}
-
-// Grid Logic
-
-@for $i from 1 through $grid-columns {
-  .col-#{$i} {
-    flex-basis: round-width($i);
-    max-width: round-width($i);
-  }
-}
 
 @media only screen and (min-device-width: 768px) {
   @for $i from 1 through $grid-columns {
