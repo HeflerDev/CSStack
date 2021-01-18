@@ -2,7 +2,7 @@
 
 ## Summary
 - <a href='#overview'>Overview</a>
-- <a href='#Working with the main containers'>Working with the main containers</a>
+- <a href='#working-with-the-main-containers'>Working with the main containers</a>
 ## Overview
 
 <p> 
