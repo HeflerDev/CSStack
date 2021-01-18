@@ -177,7 +177,7 @@ html {
   max-width: 100 %;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-device-width: 768px) {
   .col-m-1 {
     flex-basis: 8.33 %;
     max-width: 8.33 %;
@@ -238,7 +238,7 @@ html {
     max-width: 100 %;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   .col-l-1 {
     flex-basis: 8.33 %;
     max-width: 8.33 %;
