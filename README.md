@@ -71,3 +71,13 @@ And if creates something like this:<br>
 Compiles to:<br>
 <img src='./col-4-8.svg'>
 
+## How to use
+
+Install via NPM <br>
+``` npm i csstack ``` <br>
+
+Also you can include through jsdlivr <br>
+``` https://cdn.jsdelivr.net/npm/csstack@1.0.0/css/master.css ``` <br>
+
+For example, in the HTML: <br>
+``` <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/csstack@1.0.0/css/master.css'> ``` <br>
