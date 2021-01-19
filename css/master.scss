@@ -1,10 +1,10 @@
 @import './reset.css' ;
 
+div {
+  background-color: rgba(14,14,14,0.3);
+}
+
 // Grid Config
-  $grid-columns: 12;
-  :root { //Beta
-    --grid-gap: 0px;
-  }
 
 // Margins
   $margin: 1rem ;
@@ -36,31 +36,7 @@
   $font-text: serif ;
   $font-accent: cursive ;
 
-.board {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(var(--grid-gap) * -1) 0 0 calc(var(--grid-gap) * -1);
-}
 
-.col {
-  box-sizing: border-box;
-  background-clip: content-box;
-  flex-basis: 100%;
-}
-
-@function round-width($i) {
-  $width: floor(100 * $i * 100 / $grid-columns) / 100;
-  @return $width#{"%"};
-}
-
-// Grid Logic
-
-@for $i from 1 through $grid-columns {
-  .col-#{$i} {
-    flex-basis: round-width($i);
-    max-width: round-width($i);
-  }
-}
 
 // Patterns
 html{
@@ -157,6 +133,36 @@ html{
 
 // Grid Elements
 // Utility Classes
+
+  $grid-columns: 12;
+  :root { //Beta
+    --grid-gap: 0px;
+  }
+
+.col {
+  box-sizing: border-box;
+  background-clip: content-box;
+  flex-basis: 100%;
+}
+
+@function round-width($i) {
+  $width: floor(100 * $i * 100 / $grid-columns) / 100;
+  // @return #{$width}#{'%'} ~> In case of bug, test with this one
+  @return $width * 1%;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--grid-gap) * -1) 0 0 calc(var(--grid-gap) * -1);
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex-basis:round-width($i);
+    max-width:round-width($i);
+  }
+}
 
 @media only screen and (min-device-width: 768px) {
   @for $i from 1 through $grid-columns {
