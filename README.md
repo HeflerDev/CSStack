@@ -81,10 +81,10 @@ Install via NPM <br>
 ``` npm i csstack ``` <br>
 
 Also you can include through jsdlivr <br>
-``` https://cdn.jsdelivr.net/npm/csstack@1.2.1/css/master.css ``` <br>
+``` https://cdn.jsdelivr.net/npm/csstack@1.2.3/css/master.css ``` <br>
 
 For example, in the HTML: <br>
-``` <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/csstack@1.2.1/css/master.css'> ``` <br>
+``` <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/csstack@1.2.3/css/master.css'> ``` <br>
 
 ## Classes 
 ### Containers
